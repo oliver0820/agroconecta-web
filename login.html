@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - AgroConecta RD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">🌱</span>
+                    <h1 class="logo-text">AgroConecta RD</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="registro-agricultor.html" class="nav-link">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Accede a tu cuenta de AgroConecta</p>
+                </div>
+                
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <span class="label-icon">📧</span>
+                            Correo Electrónico
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input"
+                            placeholder="tu@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">
+                            <span class="label-icon">🔒</span>
+                            Contraseña
+                        </label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="form-input"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Recordar mis datos
+                        </label>
+                        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-icon">🚀</span>
+                        Ingresar a mi Cuenta
+                    </button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>o continuar con</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="btn btn-social btn-google">
+                        <span class="btn-icon">🔍</span>
+                        Google
+                    </button>
+                    <button class="btn btn-social btn-facebook">
+                        <span class="btn-icon">👤</span>
+                        Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>¿No tienes una cuenta? 
+                        <a href="registro-agricultor.html" class="auth-link">Regístrate como Agricultor</a>
+                    </p>
+                    <p>
+                        <a href="#" class="auth-link">¿Eres Comprador? Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="auth-welcome">
+                <div class="welcome-content">
+                    <h3>🌾 Bienvenido de vuelta</h3>
+                    <p>Accede para gestionar tus productos, ver transacciones y conectarte con compradores.</p>
+                    
+                    <div class="welcome-features">
+                        <div class="feature">
+                            <span class="feature-icon">📊</span>
+                            <span>Revisa tus estadísticas</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💰</span>
+                            <span>Gestiona tus precios</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📦</span>
+                            <span>Controla tu inventario</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <span>Conecta con compradores</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🌱</span>
+                        <h3>AgroConecta RD</h3>
+                    </div>
+                    <p>Conectando el campo dominicano con el mercado digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="mercado.html">Mercado</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📞 809-123-4567</p>
+                    <p>✉️ info@agroconecta.com</p>
+                    <p>📍 Santo Domingo, RD</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroConecta RD. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

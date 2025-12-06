@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios de Mercado - AgroConecta RD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">🌱</span>
+                    <h1 class="logo-text">AgroConecta RD</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">🏠 Dashboard</a></li>
+                <li><a href="mercado.html" class="nav-link">🛒 Mercado</a></li>
+                <li><a href="precios.html" class="nav-link active">📊 Precios</a></li>
+                <li class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <span class="user-avatar">👨‍🌾</span>
+                            <span class="user-name">Juan Pérez</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">👤 Mi Perfil</a>
+                            <a href="#" class="dropdown-item">⚙️ Configuración</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="index.html" class="dropdown-item logout">🚪 Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Prices Main -->
+    <main class="prices-main">
+        <div class="prices-container">
+            <!-- Prices Header -->
+            <div class="prices-header">
+                <div class="header-content">
+                    <h1>📈 Precios de Mercado en Tiempo Real</h1>
+                    <p>Monitorea los precios de productos agrícolas en toda República Dominicana</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <span class="btn-icon">📥</span>
+                        Exportar Datos
+                    </button>
+                    <button class="btn btn-outline">
+                        <span class="btn-icon">🔔</span>
+                        Alertas de Precios
+                    </button>
+                </div>
+            </div>
+
+            <!-- Market Overview -->
+            <div class="market-overview">
+                <div class="overview-card">
+                    <div class="overview-icon">📊</div>
+                    <div class="overview-content">
+                        <h3>Mercado General</h3>
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-value up">+1.8%</span>
+                                <span class="stat-label">Variación semanal</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">RD$ 42.30</span>
+                                <span class="stat-label">Precio promedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🍌</div>
+                    <div class="overview-content">
+                        <h3>Producto Más Activo</h3>
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-value">Plátano</span>
+                                <span class="stat-label">+2.5% esta semana</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">RD$ 25.00</span>
+                                <span class="stat-label">Precio actual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">📍</div>
+                    <div class="overview-content">
+                        <h3>Región Más Activa</h3>
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-value">Cibao</span>
+                                <span class="stat-label">45% del volumen</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value up">+3.2%</span>
+                                <span class="stat-label">Crecimiento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Controls -->
+            <div class="prices-controls">
+                <div class="controls-left">
+                    <div class="filter-group">
+                        <label class="filter-label">Producto:</label>
+                        <select class="filter-select">
+                            <option value="all">Todos los productos</option>
+                            <option value="platano">🍌 Plátano y Guineo</option>
+                            <option value="tomate">🍅 Vegetales y Hortalizas</option>
+                            <option value="aguacate">🥑 Frutas Tropicales</option>
+                            <option value="papa">🥔 Raíces y Tubérculos</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Región:</label>
+                        <select class="filter-select">
+                            <option value="all">Todas las regiones</option>
+                            <option value="cibao">Cibao</option>
+                            <option value="sur">Sur</option>
+                            <option value="este">Este</option>
+                            <option value="norcentral">Norcentral</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Período:</label>
+                        <select class="filter-select">
+                            <option value="today">Hoy</option>
+                            <option value="week" selected>Esta semana</option>
+                            <option value="month">Este mes</option>
+                            <option value="quarter">Este trimestre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="controls-right">
+                    <div class="view-options">
+                        <button class="view-option active" data-view="table">📋 Tabla</button>
+                        <button class="view-option" data-view="chart">📈 Gráfico</button>
+                        <button class="view-option" data-view="map">🗺️ Mapa</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prices-content">
+                <!-- Table View -->
+                <div class="content-view active" id="tableView">
+                    <div class="prices-table-container">
+                        <table class="detailed-prices-table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cibao</th>
+                                    <th>Sur</th>
+                                    <th>Este</th>
+                                    <th>Norcentral</th>
+                                    <th>Promedio</th>
+                                    <th>Tendencia</th>
+                                    <th>Volumen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="product-row">
+                                    <td class="product-cell">
+                                        <span class="product-icon">🍌</span>
+                                        <div class="product-info">
+                                            <strong>Plátano Verde</strong>
+                                            <small>Musa paradisiaca</small>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 25.00</span>
+                                        <span class="change up">+2.5%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 23.50</span>
+                                        <span class="change up">+1.8%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 27.25</span>
+                                        <span class="change up">+3.2%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 24.75</span>
+                                        <span class="change stable">0.0%</span>
+                                    </td>
+                                    <td class="average-cell">
+                                        <strong>RD$ 25.13</strong>
+                                    </td>
+                                    <td class="trend-cell">
+                                        <div class="trend-indicator up">
+                                            <span class="trend-arrow">↗</span>
+                                            <span>Alcista</span>
+                                        </div>
+                                    </td>
+                                    <td class="volume-cell">
+                                        <div class="volume-bar">
+                                            <div class="volume-fill" style="width: 85%"></div>
+                                        </div>
+                                        <span>85%</span>
+                                    </td>
+                                </tr>
+                                <tr class="product-row">
+                                    <td class="product-cell">
+                                        <span class="product-icon">🍅</span>
+                                        <div class="product-info">
+                                            <strong>Tomate Maduro</strong>
+                                            <small>Solanum lycopersicum</small>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 40.50</span>
+                                        <span class="change stable">0.0%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 38.75</span>
+                                        <span class="change down">-0.5%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 42.00</span>
+                                        <span class="change up">+1.2%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 39.25</span>
+                                        <span class="change stable">0.0%</span>
+                                    </td>
+                                    <td class="average-cell">
+                                        <strong>RD$ 40.13</strong>
+                                    </td>
+                                    <td class="trend-cell">
+                                        <div class="trend-indicator stable">
+                                            <span class="trend-arrow">→</span>
+                                            <span>Estable</span>
+                                        </div>
+                                    </td>
+                                    <td class="volume-cell">
+                                        <div class="volume-bar">
+                                            <div class="volume-fill" style="width: 72%"></div>
+                                        </div>
+                                        <span>72%</span>
+                                    </td>
+                                </tr>
+                                <tr class="product-row">
+                                    <td class="product-cell">
+                                        <span class="product-icon">🥑</span>
+                                        <div class="product-info">
+                                            <strong>Aguacate Criollo</strong>
+                                            <small>Persea americana</small>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 60.25</span>
+                                        <span class="change down">-1.2%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 58.50</span>
+                                        <span class="change down">-2.1%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 62.75</span>
+                                        <span class="change up">+0.8%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 59.80</span>
+                                        <span class="change down">-0.7%</span>
+                                    </td>
+                                    <td class="average-cell">
+                                        <strong>RD$ 60.33</strong>
+                                    </td>
+                                    <td class="trend-cell">
+                                        <div class="trend-indicator down">
+                                            <span class="trend-arrow">↘</span>
+                                            <span>Bajista</span>
+                                        </div>
+                                    </td>
+                                    <td class="volume-cell">
+                                        <div class="volume-bar">
+                                            <div class="volume-fill" style="width: 68%"></div>
+                                        </div>
+                                        <span>68%</span>
+                                    </td>
+                                </tr>
+                                <tr class="product-row">
+                                    <td class="product-cell">
+                                        <span class="product-icon">🥔</span>
+                                        <div class="product-info">
+                                            <strong>Papa Criolla</strong>
+                                            <small>Solanum tuberosum</small>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 35.75</span>
+                                        <span class="change up">+0.8%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 33.25</span>
+                                        <span class="change up">+1.5%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 37.50</span>
+                                        <span class="change stable">0.0%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 34.80</span>
+                                        <span class="change up">+0.3%</span>
+                                    </td>
+                                    <td class="average-cell">
+                                        <strong>RD$ 35.33</strong>
+                                    </td>
+                                    <td class="trend-cell">
+                                        <div class="trend-indicator up">
+                                            <span class="trend-arrow">↗</span>
+                                            <span>Alcista</span>
+                                        </div>
+                                    </td>
+                                    <td class="volume-cell">
+                                        <div class="volume-bar">
+                                            <div class="volume-fill" style="width: 55%"></div>
+                                        </div>
+                                        <span>55%</span>
+                                    </td>
+                                </tr>
+                                <tr class="product-row">
+                                    <td class="product-cell">
+                                        <span class="product-icon">🍍</span>
+                                        <div class="product-info">
+                                            <strong>Piña Dulce</strong>
+                                            <small>Ananas comosus</small>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 45.00</span>
+                                        <span class="change up">+3.1%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 42.50</span>
+                                        <span class="change up">+2.8%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 47.25</span>
+                                        <span class="change up">+4.2%</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <span class="price">RD$ 43.75</span>
+                                        <span class="change up">+2.5%</span>
+                                    </td>
+                                    <td class="average-cell">
+                                        <strong>RD$ 44.63</strong>
+                                    </td>
+                                    <td class="trend-cell">
+                                        <div class="trend-indicator up">
+                                            <span class="trend-arrow">↗</span>
+                                            <span>Alcista</span>
+                                        </div>
+                                    </td>
+                                    <td class="volume-cell">
+                                        <div class="volume-bar">
+                                            <div class="volume-fill" style="width: 48%"></div>
+                                        </div>
+                                        <span>48%</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Chart View -->
+                <div class="content-view" id="chartView">
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📈</span>
+                                <h3>Gráfico de Precios</h3>
+                                <p>Visualización interactiva de tendencias de precios</p>
+                                <div class="placeholder-chart">
+                                    <div class="chart-bars">
+                                        <div class="chart-bar" style="height: 60%">
+                                            <span class="bar-label">Plátano</span>
+                                        </div>
+                                        <div class="chart-bar" style="height: 80%">
+                                            <span class="bar-label">Tomate</span>
+                                        </div>
+                                        <div class="chart-bar" style="height: 100%">
+                                            <span class="bar-label">Aguacate</span>
+                                        </div>
+                                        <div class="chart-bar" style="height: 50%">
+                                            <span class="bar-label">Papa</span>
+                                        </div>
+                                        <div class="chart-bar" style="height: 70%">
+                                            <span class="bar-label">Piña</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map View -->
+                <div class="content-view" id="mapView">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">🗺️</span>
+                                <h3>Mapa de Precios por Región</h3>
+                                <p>Distribución geográfica de precios en República Dominicana</p>
+                                <div class="placeholder-map">
+                                    <div class="map-regions">
+                                        <div class="region cibao">
+                                            <span class="region-name">Cibao</span>
+                                            <span class="region-price">RD$ 38.50</span>
+                                        </div>
+                                        <div class="region sur">
+                                            <span class="region-name">Sur</span>
+                                            <span class="region-price">RD$ 36.25</span>
+                                        </div>
+                                        <div class="region este">
+                                            <span class="region-name">Este</span>
+                                            <span class="region-price">RD$ 41.75</span>
+                                        </div>
+                                        <div class="region norcentral">
+                                            <span class="region-name">Norcentral</span>
+                                            <span class="region-price">RD$ 37.80</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Alerts -->
+            <div class="price-alerts">
+                <div class="alerts-header">
+                    <h3>🔔 Alertas de Precios</h3>
+                    <button class="btn btn-outline btn-small">
+                        <span class="btn-icon">➕</span>
+                        Nueva Alerta
+                    </button>
+                </div>
+                <div class="alerts-list">
+                    <div class="alert-item">
+                        <div class="alert-icon">🍌</div>
+                        <div class="alert-content">
+                            <h4>Plátano sobre RD$ 26.00</h4>
+                            <p>Notificarme cuando el precio del plátano supere RD$ 26.00/kg</p>
+                        </div>
+                        <div class="alert-status active">Activa</div>
+                    </div>
+                    <div class="alert-item">
+                        <div class="alert-icon">🥑</div>
+                        <div class="alert-content">
+                            <h4>Aguacate bajo RD$ 58.00</h4>
+                            <p>Notificarme cuando el precio del aguacate baje de RD$ 58.00/kg</p>
+                        </div>
+                        <div class="alert-status active">Activa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🌱</span>
+                        <h3>AgroConecta RD</h3>
+                    </div>
+                    <p>Conectando el campo dominicano con el mercado digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="mercado.html">Mercado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Fuentes de Datos</h4>
+                    <p>📊 Ministerio de Agricultura</p>
+                    <p>📈 Banco Agrícola</p>
+                    <p>📋 ONE - Estadísticas</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroConecta RD. Datos actualizados cada 24 horas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // View Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewOptions = document.querySelectorAll('.view-option');
+            const contentViews = document.querySelectorAll('.content-view');
+            
+            viewOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options and views
+                    viewOptions.forEach(opt => opt.classList.remove('active'));
+                    contentViews.forEach(view => view.classList.remove('active'));
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Show corresponding view
+                    const viewType = this.getAttribute('data-view');
+                    document.getElementById(viewType + 'View').classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>   

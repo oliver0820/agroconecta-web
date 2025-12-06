@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Agricultor - AgroConecta RD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">🌱</span>
+                    <h1 class="logo-text">AgroConecta RD</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>👨‍🌾 Regístrate como Agricultor</h2>
+                    <p>Únete a nuestra comunidad y comienza a vender tus productos</p>
+                </div>
+
+                <form class="auth-form">
+                    <!-- Información Personal -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="section-icon">👤</span>
+                            Información Personal
+                        </h4>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">Nombre</label>
+                                <input type="text" id="firstName" class="form-input" placeholder="Juan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Apellido</label>
+                                <input type="text" id="lastName" class="form-input" placeholder="Pérez" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cedula" class="form-label">Cédula</label>
+                                <input type="text" id="cedula" class="form-input" placeholder="001-1234567-8" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" id="phone" class="form-input" placeholder="809-123-4567" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Ubicación -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="section-icon">📍</span>
+                            Ubicación de la Finca
+                        </h4>
+
+                        <div class="form-group">
+                            <label for="region" class="form-label">Región</label>
+                            <select id="region" class="form-input" required>
+                                <option value="">Selecciona tu región</option>
+                                <option value="cibao">Cibao</option>
+                                <option value="sur">Sur</option>
+                                <option value="este">Este</option>
+                                <option value="norcentral">Norcentral</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="municipio" class="form-label">Municipio</label>
+                            <input type="text" id="municipio" class="form-input" placeholder="Ej: La Vega" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="direccion" class="form-label">Dirección Completa</label>
+                            <textarea id="direccion" class="form-input" rows="3" placeholder="Describe la ubicación de tu finca..." required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Cultivos -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="section-icon">🌾</span>
+                            Cultivos Principales
+                        </h4>
+
+                        <div class="cultivos-grid">
+                            <label class="cultivo-option">
+                                <input type="checkbox" name="cultivos" value="platano">
+                                <span class="cultivo-card">
+                                    <span class="cultivo-icon">🍌</span>
+                                    <span class="cultivo-name">Plátano y Guineo</span>
+                                </span>
+                            </label>
+
+                            <label class="cultivo-option">
+                                <input type="checkbox" name="cultivos" value="vegetales">
+                                <span class="cultivo-card">
+                                    <span class="cultivo-icon">🍅</span>
+                                    <span class="cultivo-name">Vegetales y Hortalizas</span>
+                                </span>
+                            </label>
+
+                            <label class="cultivo-option">
+                                <input type="checkbox" name="cultivos" value="frutas">
+                                <span class="cultivo-card">
+                                    <span class="cultivo-icon">🥑</span>
+                                    <span class="cultivo-name">Frutas Tropicales</span>
+                                </span>
+                            </label>
+
+                            <label class="cultivo-option">
+                                <input type="checkbox" name="cultivos" value="raices">
+                                <span class="cultivo-card">
+                                    <span class="cultivo-icon">🥔</span>
+                                    <span class="cultivo-name">Raíces y Tubérculos</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cuenta -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span class="section-icon">🔐</span>
+                            Crear Cuenta
+                        </h4>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" id="password" class="form-input" placeholder="Mínimo 8 caracteres" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                <input type="password" id="confirmPassword" class="form-input" placeholder="Repite tu contraseña" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" required>
+                                <span class="checkmark"></span>
+                                Acepto los <a href="#" class="auth-link">términos y condiciones</a> y la <a href="#" class="auth-link">política de privacidad</a>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter">
+                                <span class="checkmark"></span>
+                                Deseo recibir información sobre precios de mercado y oportunidades
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-icon">🚀</span>
+                        Crear mi Cuenta de Agricultor
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿Ya tienes una cuenta? <a href="login.html" class="auth-link">Inicia Sesión aquí</a></p>
+                </div>
+            </div>
+
+            <div class="auth-welcome">
+                <div class="welcome-content">
+                    <h3>🌱 Únete a AgroConecta</h3>
+                    <p>Como agricultor en nuestra plataforma, tendrás acceso a:</p>
+                    
+                    <div class="welcome-features">
+                        <div class="feature">
+                            <span class="feature-icon">💰</span>
+                            <div>
+                                <strong>Hasta 30% más de ganancias</strong>
+                                <small>Eliminando intermediarios</small>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📊</span>
+                            <div>
+                                <strong>Precios de mercado en tiempo real</strong>
+                                <small>Toma mejores decisiones</small>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <div>
+                                <strong>Compradores verificados</strong>
+                                <small>Supermercados, exportadores, restaurantes</small>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <div>
+                                <strong>App móvil fácil de usar</strong>
+                                <small>Gestiona desde tu celular</small>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🛡️</span>
+                            <div>
+                                <strong>Pagos seguros</strong>
+                                <small>Transacciones protegidas</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-preview">
+                        <h4>Nuestra Comunidad</h4>
+                        <div class="stats-grid">
+                            <div class="stat-preview">
+                                <span class="stat-number">4,800+</span>
+                                <span class="stat-label">Agricultores</span>
+                            </div>
+                            <div class="stat-preview">
+                                <span class="stat-number">RD$ 1,030M</span>
+                                <span class="stat-label">En transacciones</span>
+                            </div>
+                            <div class="stat-preview">
+                                <span class="stat-number">45,000+</span>
+                                <span class="stat-label">Productos activos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🌱</span>
+                        <h3>AgroConecta RD</h3>
+                    </div>
+                    <p>Conectando el campo dominicano con el mercado digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="mercado.html">Mercado</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📞 809-123-4567</p>
+                    <p>✉️ info@agroconecta.com</p>
+                    <p>📍 Santo Domingo, RD</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroConecta RD. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

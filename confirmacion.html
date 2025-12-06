@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Pedido Confirmado! - AgroConecta RD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-icon">🌱</span>
+                    <h1 class="logo-text">AgroConecta RD</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">🏠 Dashboard</a></li>
+                <li><a href="mercado.html" class="nav-link">🛒 Mercado</a></li>
+                <li><a href="precios.html" class="nav-link">📊 Precios</a></li>
+                <li class="user-menu">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <span class="user-avatar">👨‍🌾</span>
+                            <span class="user-name">Juan Pérez</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">👤 Mi Perfil</a>
+                            <a href="#" class="dropdown-item">⚙️ Configuración</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="index.html" class="dropdown-item logout">🚪 Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Confirmation Main -->
+    <main class="confirmation-main">
+        <div class="confirmation-container">
+            <!-- Success Header -->
+            <div class="success-header">
+                <div class="success-icon">🎉</div>
+                <h1>¡Pedido Confirmado!</h1>
+                <p class="success-subtitle">Tu pedido ha sido procesado exitosamente</p>
+                <div class="order-number">
+                    Número de pedido: <strong>#AGRO-2024-00125</strong>
+                </div>
+            </div>
+
+            <div class="confirmation-content">
+                <!-- Order Summary -->
+                <div class="confirmation-card">
+                    <h3>📦 Resumen del Pedido</h3>
+                    
+                    <div class="order-details">
+                        <div class="detail-row">
+                            <span>Fecha del pedido:</span>
+                            <strong>20 de Noviembre, 2024</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Estado:</span>
+                            <span class="status-badge confirmed">Confirmado</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Método de pago:</span>
+                            <strong>Tarjeta de Crédito •••• 3456</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Total pagado:</span>
+                            <strong class="total-amount">RD$ 1,281.25</strong>
+                        </div>
+                    </div>
+
+                    <div class="order-items-confirm">
+                        <div class="order-item-confirm">
+                            <div class="item-image">🍌</div>
+                            <div class="item-info">
+                                <h4>Plátano Verde Premium</h4>
+                                <p>Agricultor: María Rodríguez</p>
+                                <p>Cantidad: 50 kg × RD$ 25.00</p>
+                            </div>
+                            <div class="item-total">RD$ 1,250.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Information -->
+                <div class="confirmation-card">
+                    <h3>🚚 Información de Entrega</h3>
+                    
+                    <div class="delivery-details">
+                        <div class="address-card">
+                            <div class="address-header">
+                                <span class="address-icon">📍</span>
+                                <h4>Dirección de Entrega</h4>
+                            </div>
+                            <div class="address-content">
+                                <p><strong>Juan Pérez</strong></p>
+                                <p>Av. Principal #123</p>
+                                <p>Santo Domingo Este</p>
+                                <p>Distrito Nacional</p>
+                                <p>📞 809-123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-timeline">
+                            <div class="timeline-item active">
+                                <div class="timeline-marker">1</div>
+                                <div class="timeline-content">
+                                    <strong>Pedido Confirmado</strong>
+                                    <p>Hoy, 10:30 AM</p>
+                                    <p>Tu pedido ha sido confirmado y está siendo procesado</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">2</div>
+                                <div class="timeline-content">
+                                    <strong>En Preparación</strong>
+                                    <p>Próximamente</p>
+                                    <p>El agricultor preparará tu pedido</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">3</div>
+                                <div class="timeline-content">
+                                    <strong>En Camino</strong>
+                                    <p>Próximamente</p>
+                                    <p>Tu pedido saldrá hacia tu dirección</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">4</div>
+                                <div class="timeline-content">
+                                    <strong>Entregado</strong>
+                                    <p>Próximamente</p>
+                                    <p>Esperado: 22-23 de Noviembre</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farmer Contact -->
+                <div class="confirmation-card">
+                    <h3>👨‍🌾 Información del Agricultor</h3>
+                    
+                    <div class="farmer-contact">
+                        <div class="farmer-card">
+                            <div class="farmer-avatar">👩‍🌾</div>
+                            <div class="farmer-info">
+                                <h4>María Rodríguez</h4>
+                                <p>Agricultora certificada • La Vega, Cibao</p>
+                                <div class="farmer-stats">
+                                    <span class="farmer-stat">⭐ 4.8/5</span>
+                                    <span class="farmer-stat">🛒 89 ventas</span>
+                                    <span class="farmer-stat">🚚 98% entrega a tiempo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-actions">
+                            <button class="btn btn-outline">
+                                <span class="btn-icon">💬</span>
+                                Enviar Mensaje
+                            </button>
+                            <button class="btn btn-outline">
+                                <span class="btn-icon">📞</span>
+                                Llamar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="confirmation-card">
+                    <h3>📝 Próximos Pasos</h3>
+                    
+                    <div class="next-steps">
+                        <div class="step-card">
+                            <div class="step-icon">📧</div>
+                            <div class="step-content">
+                                <h4>Recibirás un email de confirmación</h4>
+                                <p>Hemos enviado los detalles de tu pedido a tu correo electrónico</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">🔔</div>
+                            <div class="step-content">
+                                <h4>Notificaciones de seguimiento</h4>
+                                <p>Recibirás actualizaciones sobre el estado de tu pedido</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">📦</div>
+                            <div class="step-content">
+                                <h4>Preparación del pedido</h4>
+                                <p>El agricultor contactará para coordinar la entrega</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="confirmation-actions">
+                <button class="btn btn-primary btn-large">
+                    <span class="btn-icon">📱</span>
+                    Ver en Mi Dashboard
+                </button>
+                <button class="btn btn-outline btn-large">
+                    <span class="btn-icon">🖨️</span>
+                    Imprimir Comprobante
+                </button>
+                <button class="btn btn-outline btn-large">
+                    <span class="btn-icon">🛒</span>
+                    Seguir Comprando
+                </button>
+            </div>
+
+            <!-- Support Info -->
+            <div class="support-info">
+                <div class="support-card">
+                    <h4>💬 ¿Necesitas ayuda?</h4>
+                    <p>Nuestro equipo de soporte está disponible para ayudarte</p>
+                    <div class="support-contacts">
+                        <div class="support-contact">
+                            <span class="contact-icon">📞</span>
+                            <span>809-123-4567</span>
+                        </div>
+                        <div class="support-contact">
+                            <span class="contact-icon">✉️</span>
+                            <span>soporte@agroconecta.com</span>
+                        </div>
+                        <div class="support-contact">
+                            <span class="contact-icon">💬</span>
+                            <span>Chat en vivo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🌱</span>
+                        <h3>AgroConecta RD</h3>
+                    </div>
+                    <p>Conectando el campo dominicano con el mercado digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="mercado.html">Mercado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <p>📞 809-123-4567</p>
+                    <p>✉️ soporte@agroconecta.com</p>
+                    <p>🕒 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroConecta RD. Pedido #AGRO-2024-00125</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
