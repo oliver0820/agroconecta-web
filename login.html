@@ -43,7 +43,7 @@
                             id="email" 
                             class="form-input"
                             placeholder="tu@email.com"
-                            required
+                            
                         >
                     </div>
 
@@ -57,7 +57,7 @@
                             id="password" 
                             class="form-input"
                             placeholder="Ingresa tu contraseña"
-                            required
+                            
                         >
                     </div>
 
@@ -160,5 +160,12 @@
             </div>
         </div>
     </footer>
+
+        <script>
+        document.querySelector('.auth-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = "dashboard.html";
+        });
+    </script>
 </body>
 </html>
