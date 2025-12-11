@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Pedido Confirmado! - AgroConecta RD</title>
+    <title>Mercado - AgroConecta RD</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="dashboard.html" class="nav-link">🏠 Dashboard</a></li>
-                <li><a href="mercado.html" class="nav-link">🛒 Mercado</a></li>
+                <li><a href="mercado.html" class="nav-link active">🛒 Mercado</a></li>
                 <li><a href="precios.html" class="nav-link">📊 Precios</a></li>
                 <li class="user-menu">
                     <div class="user-dropdown">
@@ -39,208 +39,403 @@
         </nav>
     </header>
 
-    <!-- Confirmation Main -->
-    <main class="confirmation-main">
-        <div class="confirmation-container">
-            <!-- Success Header -->
-            <div class="success-header">
-                <div class="success-icon">🎉</div>
-                <h1>¡Pedido Confirmado!</h1>
-                <p class="success-subtitle">Tu pedido ha sido procesado exitosamente</p>
-                <div class="order-number">
-                    Número de pedido: <strong>#AGRO-2024-00125</strong>
+    <!-- Market Main -->
+    <main class="market-main">
+        <div class="market-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h3>🔍 Filtros</h3>
+                    <button class="btn-clear-filters">Limpiar</button>
                 </div>
-            </div>
 
-            <div class="confirmation-content">
-                <!-- Order Summary -->
-                <div class="confirmation-card">
-                    <h3>📦 Resumen del Pedido</h3>
-                    
-                    <div class="order-details">
-                        <div class="detail-row">
-                            <span>Fecha del pedido:</span>
-                            <strong>20 de Noviembre, 2024</strong>
-                        </div>
-                        <div class="detail-row">
-                            <span>Estado:</span>
-                            <span class="status-badge confirmed">Confirmado</span>
-                        </div>
-                        <div class="detail-row">
-                            <span>Método de pago:</span>
-                            <strong>Tarjeta de Crédito •••• 3456</strong>
-                        </div>
-                        <div class="detail-row">
-                            <span>Total pagado:</span>
-                            <strong class="total-amount">RD$ 1,281.25</strong>
-                        </div>
-                    </div>
-
-                    <div class="order-items-confirm">
-                        <div class="order-item-confirm">
-                            <div class="item-image">🍌</div>
-                            <div class="item-info">
-                                <h4>Plátano Verde Premium</h4>
-                                <p>Agricultor: María Rodríguez</p>
-                                <p>Cantidad: 50 kg × RD$ 25.00</p>
-                            </div>
-                            <div class="item-total">RD$ 1,250.00</div>
-                        </div>
+                <!-- Categorías -->
+                <div class="filter-group">
+                    <h4 class="filter-title">🌾 Categorías</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="platano" checked>
+                            <span class="checkmark"></span>
+                            🍌 Plátano y Guineo
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="vegetales" checked>
+                            <span class="checkmark"></span>
+                            🍅 Vegetales y Hortalizas
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="frutas">
+                            <span class="checkmark"></span>
+                            🥑 Frutas Tropicales
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="raices">
+                            <span class="checkmark"></span>
+                            🥔 Raíces y Tubérculos
+                        </label>
                     </div>
                 </div>
 
-                <!-- Delivery Information -->
-                <div class="confirmation-card">
-                    <h3>🚚 Información de Entrega</h3>
-                    
-                    <div class="delivery-details">
-                        <div class="address-card">
-                            <div class="address-header">
-                                <span class="address-icon">📍</span>
-                                <h4>Dirección de Entrega</h4>
-                            </div>
-                            <div class="address-content">
-                                <p><strong>Juan Pérez</strong></p>
-                                <p>Av. Principal #123</p>
-                                <p>Santo Domingo Este</p>
-                                <p>Distrito Nacional</p>
-                                <p>📞 809-123-4567</p>
-                            </div>
-                        </div>
+                <!-- Regiones -->
+                <div class="filter-group">
+                    <h4 class="filter-title">📍 Región</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="cibao" checked>
+                            <span class="checkmark"></span>
+                            Cibao (45%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="sur" checked>
+                            <span class="checkmark"></span>
+                            Sur (30%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="este">
+                            <span class="checkmark"></span>
+                            Este (15%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="norcentral">
+                            <span class="checkmark"></span>
+                            Norcentral (10%)
+                        </label>
+                    </div>
+                </div>
 
-                        <div class="delivery-timeline">
-                            <div class="timeline-item active">
-                                <div class="timeline-marker">1</div>
-                                <div class="timeline-content">
-                                    <strong>Pedido Confirmado</strong>
-                                    <p>Hoy, 10:30 AM</p>
-                                    <p>Tu pedido ha sido confirmado y está siendo procesado</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">2</div>
-                                <div class="timeline-content">
-                                    <strong>En Preparación</strong>
-                                    <p>Próximamente</p>
-                                    <p>El agricultor preparará tu pedido</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">3</div>
-                                <div class="timeline-content">
-                                    <strong>En Camino</strong>
-                                    <p>Próximamente</p>
-                                    <p>Tu pedido saldrá hacia tu dirección</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">4</div>
-                                <div class="timeline-content">
-                                    <strong>Entregado</strong>
-                                    <p>Próximamente</p>
-                                    <p>Esperado: 22-23 de Noviembre</p>
-                                </div>
-                            </div>
+                <!-- Precio -->
+                <div class="filter-group">
+                    <h4 class="filter-title">💰 Precio (RD$/kg)</h4>
+                    <div class="price-range">
+                        <div class="range-inputs">
+                            <input type="number" class="range-input" placeholder="Mín" value="0">
+                            <span>-</span>
+                            <input type="number" class="range-input" placeholder="Máx" value="100">
                         </div>
                     </div>
                 </div>
 
-                <!-- Farmer Contact -->
-                <div class="confirmation-card">
-                    <h3>👨‍🌾 Información del Agricultor</h3>
-                    
-                    <div class="farmer-contact">
-                        <div class="farmer-card">
-                            <div class="farmer-avatar">👩‍🌾</div>
-                            <div class="farmer-info">
-                                <h4>María Rodríguez</h4>
-                                <p>Agricultora certificada • La Vega, Cibao</p>
-                                <div class="farmer-stats">
-                                    <span class="farmer-stat">⭐ 4.8/5</span>
-                                    <span class="farmer-stat">🛒 89 ventas</span>
-                                    <span class="farmer-stat">🚚 98% entrega a tiempo</span>
+                <!-- Calidad -->
+                <div class="filter-group">
+                    <h4 class="filter-title">⭐ Calidad</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="premium">
+                            <span class="checkmark"></span>
+                            🌟 Premium
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="estandar" checked>
+                            <span class="checkmark"></span>
+                            ✅ Estándar
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="economico">
+                            <span class="checkmark"></span>
+                            💰 Económico
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Disponibilidad -->
+                <div class="filter-group">
+                    <h4 class="filter-title">📦 Disponibilidad</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="in-stock" checked>
+                            <span class="checkmark"></span>
+                            ✅ En stock
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="low-stock">
+                            <span class="checkmark"></span>
+                            ⚠️ Poco stock
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-apply-filters">
+                    🔄 Aplicar Filtros
+                </button>
+            </aside>
+
+            <!-- Market Content -->
+            <div class="market-content">
+                <!-- Search and Sort -->
+                <div class="market-header">
+                    <div class="search-box">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" class="search-input" placeholder="Buscar productos...">
+                        </div>
+                        <button class="btn btn-primary">
+                            Buscar
+                        </button>
+                    </div>
+
+                    <div class="sort-options">
+                        <span class="sort-label">Ordenar por:</span>
+                        <select class="sort-select">
+                            <option value="relevance">Relevancia</option>
+                            <option value="price-low">Precio: Menor a Mayor</option>
+                            <option value="price-high">Precio: Mayor a Menor</option>
+                            <option value="newest">Más Recientes</option>
+                            <option value="rating">Mejor Calificados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Info -->
+                <div class="results-info">
+                    <p>Se encontraron <strong>24 productos</strong> que coinciden con tu búsqueda</p>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">⏹️</button>
+                        <button class="view-btn" data-view="list">📋</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsView">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <div class="product-badge premium">🌟 Premium</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍌</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Plátano Verde de Calidad Superior</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>María Rodríguez</strong></p>
+                            <p class="product-location">📍 Cibao, La Vega</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">300 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 25/kg</span>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="contact-actions">
-                            <button class="btn btn-outline">
-                                <span class="btn-icon">💬</span>
-                                Enviar Mensaje
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.8 (124)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
                             </button>
-                            <button class="btn btn-outline">
-                                <span class="btn-icon">📞</span>
-                                Llamar
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <div class="product-badge organic">🌿 Orgánico</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍅</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tomate Maduro Orgánico</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Carlos Santana</strong></p>
+                            <p class="product-location">📍 Sur, San Juan</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">150 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 40/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.9 (89)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <div class="product-badge popular">🔥 Popular</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥑</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Aguacate Criollo Fresco</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Roberto Martínez</strong></p>
+                            <p class="product-location">📍 Este, La Romana</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">80 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 60/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.7 (156)</span>
+                                <span class="delivery">📦 Recoge en finca</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <div class="product-badge new">🆕 Nuevo</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥔</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Papa Criolla Fresca</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Ana García</strong></p>
+                            <p class="product-location">📍 Norcentral, Moca</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">200 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 35/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.6 (67)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card">
+                        <div class="product-badge discount">💫 Oferta</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍍</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Piña Dulce de Barahona</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Miguel Díaz</strong></p>
+                            <p class="product-location">📍 Sur, Barahona</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">120 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 45/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.8 (92)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card">
+                        <div class="product-badge low-stock">⚠️ Últimas unidades</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥬</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Lechuga Romana Fresca</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Elena Vargas</strong></p>
+                            <p class="product-location">📍 Cibao, Santiago</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">25 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 30/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.5 (43)</span>
+                                <span class="delivery">📦 Recoge en finca</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Next Steps -->
-                <div class="confirmation-card">
-                    <h3>📝 Próximos Pasos</h3>
-                    
-                    <div class="next-steps">
-                        <div class="step-card">
-                            <div class="step-icon">📧</div>
-                            <div class="step-content">
-                                <h4>Recibirás un email de confirmación</h4>
-                                <p>Hemos enviado los detalles de tu pedido a tu correo electrónico</p>
-                            </div>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-icon">🔔</div>
-                            <div class="step-content">
-                                <h4>Notificaciones de seguimiento</h4>
-                                <p>Recibirás actualizaciones sobre el estado de tu pedido</p>
-                            </div>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-icon">📦</div>
-                            <div class="step-content">
-                                <h4>Preparación del pedido</h4>
-                                <p>El agricultor contactará para coordinar la entrega</p>
-                            </div>
-                        </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn disabled">← Anterior</button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">8</button>
                     </div>
-                </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="confirmation-actions">
-                <button class="btn btn-primary btn-large">
-                    <span class="btn-icon">📱</span>
-                    Ver en Mi Dashboard
-                </button>
-                <button class="btn btn-outline btn-large">
-                    <span class="btn-icon">🖨️</span>
-                    Imprimir Comprobante
-                </button>
-                <button class="btn btn-outline btn-large">
-                    <span class="btn-icon">🛒</span>
-                    Seguir Comprando
-                </button>
-            </div>
-
-            <!-- Support Info -->
-            <div class="support-info">
-                <div class="support-card">
-                    <h4>💬 ¿Necesitas ayuda?</h4>
-                    <p>Nuestro equipo de soporte está disponible para ayudarte</p>
-                    <div class="support-contacts">
-                        <div class="support-contact">
-                            <span class="contact-icon">📞</span>
-                            <span>809-123-4567</span>
-                        </div>
-                        <div class="support-contact">
-                            <span class="contact-icon">✉️</span>
-                            <span>soporte@agroconecta.com</span>
-                        </div>
-                        <div class="support-contact">
-                            <span class="contact-icon">💬</span>
-                            <span>Chat en vivo</span>
-                        </div>
-                    </div>
+                    <button class="pagination-btn">Siguiente →</button>
                 </div>
             </div>
         </div>
@@ -262,20 +457,42 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="mercado.html">Mercado</a></li>
+                        <li><a href="precios.html">Precios</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Soporte</h4>
                     <p>📞 809-123-4567</p>
                     <p>✉️ soporte@agroconecta.com</p>
-                    <p>🕒 24/7</p>
+                    <p>🕒 Lun-Vie: 8:00 AM - 6:00 PM</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AgroConecta RD. Pedido #AGRO-2024-00125</p>
+                <p>&copy; 2024 AgroConecta RD. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // View Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewBtns = document.querySelectorAll('.view-btn');
+            const productsView = document.getElementById('productsView');
+            
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    viewBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Toggle view
+                    const viewType = this.getAttribute('data-view');
+                    productsView.className = viewType === 'grid' ? 'products-grid' : 'products-list-view';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
