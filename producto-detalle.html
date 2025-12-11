@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plátano Verde - AgroConecta RD</title>
+    <title>Mercado - AgroConecta RD</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="dashboard.html" class="nav-link">🏠 Dashboard</a></li>
-                <li><a href="mercado.html" class="nav-link">🛒 Mercado</a></li>
+                <li><a href="mercado.html" class="nav-link active">🛒 Mercado</a></li>
                 <li><a href="precios.html" class="nav-link">📊 Precios</a></li>
                 <li class="user-menu">
                     <div class="user-dropdown">
@@ -39,411 +39,403 @@
         </nav>
     </header>
 
-    <!-- Product Detail Main -->
-    <main class="product-detail-main">
-        <div class="product-container">
-            <!-- Breadcrumb -->
-            <nav class="breadcrumb">
-                <a href="index.html">Inicio</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="mercado.html">Mercado</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="mercado.html">Plátano y Guineo</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="current">Plátano Verde</span>
-            </nav>
+    <!-- Market Main -->
+    <main class="market-main">
+        <div class="market-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filters-header">
+                    <h3>🔍 Filtros</h3>
+                    <button class="btn-clear-filters">Limpiar</button>
+                </div>
 
-            <!-- Product Main Content -->
-            <div class="product-main">
-                <!-- Product Gallery -->
-                <div class="product-gallery">
-                    <div class="main-image">
-                        <div class="image-container">
-                            <div class="product-image-large">
-                                🍌
-                            </div>
-                            <div class="image-badges">
-                                <span class="badge premium">🌟 Premium</span>
-                                <span class="badge organic">🌿 Orgánico</span>
-                                <span class="badge verified">✅ Verificado</span>
-                            </div>
-                        </div>
+                <!-- Categorías -->
+                <div class="filter-group">
+                    <h4 class="filter-title">🌾 Categorías</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="platano" checked>
+                            <span class="checkmark"></span>
+                            🍌 Plátano y Guineo
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="vegetales" checked>
+                            <span class="checkmark"></span>
+                            🍅 Vegetales y Hortalizas
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="frutas">
+                            <span class="checkmark"></span>
+                            🥑 Frutas Tropicales
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="raices">
+                            <span class="checkmark"></span>
+                            🥔 Raíces y Tubérculos
+                        </label>
                     </div>
-                    <div class="image-thumbnails">
-                        <div class="thumbnail active">
-                            <div class="thumb-image">🍌</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="thumb-image">🌿</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="thumb-image">🏞️</div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="thumb-image">📏</div>
+                </div>
+
+                <!-- Regiones -->
+                <div class="filter-group">
+                    <h4 class="filter-title">📍 Región</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="cibao" checked>
+                            <span class="checkmark"></span>
+                            Cibao (45%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="sur" checked>
+                            <span class="checkmark"></span>
+                            Sur (30%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="este">
+                            <span class="checkmark"></span>
+                            Este (15%)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="region" value="norcentral">
+                            <span class="checkmark"></span>
+                            Norcentral (10%)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Precio -->
+                <div class="filter-group">
+                    <h4 class="filter-title">💰 Precio (RD$/kg)</h4>
+                    <div class="price-range">
+                        <div class="range-inputs">
+                            <input type="number" class="range-input" placeholder="Mín" value="0">
+                            <span>-</span>
+                            <input type="number" class="range-input" placeholder="Máx" value="100">
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Info -->
-                <div class="product-info">
-                    <div class="product-header">
-                        <h1 class="product-title">Plátano Verde de Calidad Superior</h1>
-                        <div class="product-rating">
-                            <div class="stars">
-                                ⭐⭐⭐⭐⭐
-                            </div>
-                            <span class="rating-value">4.8 (124 reseñas)</span>
-                        </div>
+                <!-- Calidad -->
+                <div class="filter-group">
+                    <h4 class="filter-title">⭐ Calidad</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="premium">
+                            <span class="checkmark"></span>
+                            🌟 Premium
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="estandar" checked>
+                            <span class="checkmark"></span>
+                            ✅ Estándar
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="quality" value="economico">
+                            <span class="checkmark"></span>
+                            💰 Económico
+                        </label>
                     </div>
+                </div>
 
-                    <div class="product-seller">
-                        <div class="seller-info">
-                            <div class="seller-avatar">👩‍🌾</div>
-                            <div class="seller-details">
-                                <h3>María Rodríguez</h3>
-                                <p>Agricultora certificada • Miembro desde 2022</p>
-                                <div class="seller-stats">
-                                    <span class="stat">⭐ 4.8/5</span>
-                                    <span class="stat">🛒 89 ventas</span>
-                                    <span class="stat">🚚 98% entrega a tiempo</span>
-                                </div>
-                            </div>
+                <!-- Disponibilidad -->
+                <div class="filter-group">
+                    <h4 class="filter-title">📦 Disponibilidad</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="in-stock" checked>
+                            <span class="checkmark"></span>
+                            ✅ En stock
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="availability" value="low-stock">
+                            <span class="checkmark"></span>
+                            ⚠️ Poco stock
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-apply-filters">
+                    🔄 Aplicar Filtros
+                </button>
+            </aside>
+
+            <!-- Market Content -->
+            <div class="market-content">
+                <!-- Search and Sort -->
+                <div class="market-header">
+                    <div class="search-box">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" class="search-input" placeholder="Buscar productos...">
                         </div>
-                        <button class="btn btn-outline">
-                            <span class="btn-icon">💬</span>
-                            Contactar
+                        <button class="btn btn-primary">
+                            Buscar
                         </button>
                     </div>
 
-                    <div class="product-pricing">
-                        <div class="price-main">
-                            <span class="current-price">RD$ 25.00</span>
-                            <span class="price-unit">/ kilogramo</span>
-                        </div>
-                        <div class="price-comparison">
-                            <span class="market-price">Precio de mercado: RD$ 23.50 - 27.25</span>
-                            <span class="price-status up">+2.5% sobre el promedio</span>
-                        </div>
-                    </div>
-
-                    <div class="product-availability">
-                        <div class="availability-info">
-                            <span class="stock-label">Disponibilidad:</span>
-                            <span class="stock-value in-stock">En stock (300 kg)</span>
-                        </div>
-                        <div class="harvest-info">
-                            <span class="harvest-label">Cosechado:</span>
-                            <span class="harvest-value">15 de Noviembre, 2024</span>
-                        </div>
-                    </div>
-
-                    <!-- Order Form -->
-                    <div class="order-form">
-                        <div class="form-group">
-                            <label class="form-label">Cantidad (kilogramos)</label>
-                            <div class="quantity-selector">
-                                <button class="quantity-btn minus">-</button>
-                                <input type="number" class="quantity-input" value="50" min="10" max="300" step="10">
-                                <button class="quantity-btn plus">+</button>
-                                <div class="quantity-presets">
-                                    <button class="preset-btn" data-value="25">25 kg</button>
-                                    <button class="preset-btn active" data-value="50">50 kg</button>
-                                    <button class="preset-btn" data-value="100">100 kg</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="delivery-options">
-                            <label class="form-label">Opción de entrega</label>
-                            <div class="delivery-option">
-                                <input type="radio" name="delivery" id="delivery-included" checked>
-                                <label for="delivery-included">
-                                    <span class="option-icon">🚚</span>
-                                    <div class="option-content">
-                                        <strong>Entrega incluida</strong>
-                                        <small>Recibe en tu negocio en 2-3 días</small>
-                                    </div>
-                                    <span class="option-price">Gratis</span>
-                                </label>
-                            </div>
-                            <div class="delivery-option">
-                                <input type="radio" name="delivery" id="delivery-pickup">
-                                <label for="delivery-pickup">
-                                    <span class="option-icon">📦</span>
-                                    <div class="option-content">
-                                        <strong>Recoger en finca</strong>
-                                        <small>La Vega, Cibao. Coordinar fecha</small>
-                                    </div>
-                                    <span class="option-price">-RD$ 2.00/kg</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="order-summary">
-                            <div class="summary-row">
-                                <span>50 kg × RD$ 25.00</span>
-                                <span>RD$ 1,250.00</span>
-                            </div>
-                            <div class="summary-row">
-                                <span>Entrega</span>
-                                <span>Gratis</span>
-                            </div>
-                            <div class="summary-row">
-                                <span>Comisión plataforma (2.5%)</span>
-                                <span>RD$ 31.25</span>
-                            </div>
-                            <div class="summary-row total">
-                                <strong>Total a pagar</strong>
-                                <strong>RD$ 1,281.25</strong>
-                            </div>
-                        </div>
-
-                        <div class="order-actions">
-                            <button class="btn btn-primary btn-large">
-                                <span class="btn-icon">🛒</span>
-                                Realizar Pedido
-                            </button>
-                            <button class="btn btn-outline">
-                                <span class="btn-icon">💾</span>
-                                Guardar para después
-                            </button>
-                        </div>
+                    <div class="sort-options">
+                        <span class="sort-label">Ordenar por:</span>
+                        <select class="sort-select">
+                            <option value="relevance">Relevancia</option>
+                            <option value="price-low">Precio: Menor a Mayor</option>
+                            <option value="price-high">Precio: Mayor a Menor</option>
+                            <option value="newest">Más Recientes</option>
+                            <option value="rating">Mejor Calificados</option>
+                        </select>
                     </div>
                 </div>
-            </div>
 
-            <!-- Product Tabs -->
-            <div class="product-tabs">
-                <div class="tabs-header">
-                    <button class="tab-btn active" data-tab="description">📋 Descripción</button>
-                    <button class="tab-btn" data-tab="specifications">📏 Especificaciones</button>
-                    <button class="tab-btn" data-tab="reviews">⭐ Reseñas</button>
-                    <button class="tab-btn" data-tab="shipping">🚚 Envío</button>
+                <!-- Results Info -->
+                <div class="results-info">
+                    <p>Se encontraron <strong>24 productos</strong> que coinciden con tu búsqueda</p>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">⏹️</button>
+                        <button class="view-btn" data-view="list">📋</button>
+                    </div>
                 </div>
 
-                <div class="tabs-content">
-                    <!-- Description Tab -->
-                    <div class="tab-pane active" id="description">
-                        <div class="description-content">
-                            <h3>🍌 Plátano Verde de Calidad Premium</h3>
-                            <p>Nuestro plátano verde es cultivado con técnicas sostenibles en las fértiles tierras de La Vega, Cibao. Cada racimo es cuidadosamente seleccionado para garantizar la mejor calidad y frescura.</p>
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsView">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <div class="product-badge premium">🌟 Premium</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍌</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Plátano Verde de Calidad Superior</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>María Rodríguez</strong></p>
+                            <p class="product-location">📍 Cibao, La Vega</p>
                             
-                            <div class="features-grid">
-                                <div class="feature">
-                                    <span class="feature-icon">🌱</span>
-                                    <div class="feature-content">
-                                        <strong>Cultivo Sostenible</strong>
-                                        <p>Practicamos agricultura responsable sin pesticidas dañinos</p>
-                                    </div>
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">300 kg</span>
                                 </div>
-                                <div class="feature">
-                                    <span class="feature-icon">🚚</span>
-                                    <div class="feature-content">
-                                        <strong>Frescura Garantizada</strong>
-                                        <p>Cosechado máximo 48 horas antes de la entrega</p>
-                                    </div>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">⭐</span>
-                                    <div class="feature-content">
-                                        <strong>Calidad Premium</strong>
-                                        <p>Seleccionamos solo los mejores racimos para nuestros clientes</p>
-                                    </div>
-                                </div>
-                                <div class="feature">
-                                    <span class="feature-icon">📊</span>
-                                    <div class="feature-content">
-                                        <strong>Control de Calidad</strong>
-                                        <p>Cada envío pasa por rigurosos controles de calidad</p>
-                                    </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 25/kg</span>
                                 </div>
                             </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.8 (124)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Specifications Tab -->
-                    <div class="tab-pane" id="specifications">
-                        <div class="specs-grid">
-                            <div class="spec-group">
-                                <h4>Información del Producto</h4>
-                                <div class="spec-item">
-                                    <span class="spec-label">Variedad</span>
-                                    <span class="spec-value">Plátano Macho</span>
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <div class="product-badge organic">🌿 Orgánico</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍅</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tomate Maduro Orgánico</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Carlos Santana</strong></p>
+                            <p class="product-location">📍 Sur, San Juan</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">150 kg</span>
                                 </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Tipo de Cultivo</span>
-                                    <span class="spec-value">Orgánico</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Madurez</span>
-                                    <span class="spec-value">Verde (para cocinar)</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Tamaño Promedio</span>
-                                    <span class="spec-value">18-22 cm</span>
-                                </div>
-                            </div>
-                            <div class="spec-group">
-                                <h4>Información del Agricultor</h4>
-                                <div class="spec-item">
-                                    <span class="spec-label">Ubicación</span>
-                                    <span class="spec-value">La Vega, Cibao</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Tamaño de Finca</span>
-                                    <span class="spec-value">5 tareas</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Años de Experiencia</span>
-                                    <span class="spec-value">15 años</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Certificaciones</span>
-                                    <span class="spec-value">Agricultura Sostenible</span>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 40/kg</span>
                                 </div>
                             </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.9 (89)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Reviews Tab -->
-                    <div class="tab-pane" id="reviews">
-                        <div class="reviews-summary">
-                            <div class="rating-overview">
-                                <div class="overall-rating">
-                                    <div class="rating-score">4.8</div>
-                                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-                                    <div class="rating-count">124 reseñas</div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <div class="product-badge popular">🔥 Popular</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥑</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Aguacate Criollo Fresco</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Roberto Martínez</strong></p>
+                            <p class="product-location">📍 Este, La Romana</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">80 kg</span>
                                 </div>
-                                <div class="rating-bars">
-                                    <div class="rating-bar">
-                                        <span>5 estrellas</span>
-                                        <div class="bar-container">
-                                            <div class="bar-fill" style="width: 85%"></div>
-                                        </div>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="rating-bar">
-                                        <span>4 estrellas</span>
-                                        <div class="bar-container">
-                                            <div class="bar-fill" style="width: 12%"></div>
-                                        </div>
-                                        <span>12%</span>
-                                    </div>
-                                    <div class="rating-bar">
-                                        <span>3 estrellas</span>
-                                        <div class="bar-container">
-                                            <div class="bar-fill" style="width: 2%"></div>
-                                        </div>
-                                        <span>2%</span>
-                                    </div>
-                                    <div class="rating-bar">
-                                        <span>2 estrellas</span>
-                                        <div class="bar-container">
-                                            <div class="bar-fill" style="width: 1%"></div>
-                                        </div>
-                                        <span>1%</span>
-                                    </div>
-                                    <div class="rating-bar">
-                                        <span>1 estrella</span>
-                                        <div class="bar-container">
-                                            <div class="bar-fill" style="width: 0%"></div>
-                                        </div>
-                                        <span>0%</span>
-                                    </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 60/kg</span>
                                 </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.7 (156)</span>
+                                <span class="delivery">📦 Recoge en finca</span>
                             </div>
                         </div>
-
-                        <div class="reviews-list">
-                            <div class="review-item">
-                                <div class="review-header">
-                                    <div class="reviewer">
-                                        <span class="reviewer-avatar">👤</span>
-                                        <div class="reviewer-info">
-                                            <strong>Supermercado Nacional</strong>
-                                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                                        </div>
-                                    </div>
-                                    <span class="review-date">Hace 2 días</span>
-                                </div>
-                                <p>"Excelente calidad de plátano. Siempre llega fresco y en perfectas condiciones. María es muy profesional en sus entregas."</p>
-                            </div>
-                            <div class="review-item">
-                                <div class="review-header">
-                                    <div class="reviewer">
-                                        <span class="reviewer-avatar">👤</span>
-                                        <div class="reviewer-info">
-                                            <strong>Restaurante Sabores</strong>
-                                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                                        </div>
-                                    </div>
-                                    <span class="review-date">Hace 1 semana</span>
-                                </div>
-                                <p>"El plátano perfecto para nuestros platos. Calidad consistente y precio justo. Recomendado 100%."</p>
-                            </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Shipping Tab -->
-                    <div class="tab-pane" id="shipping">
-                        <div class="shipping-info">
-                            <h3>🚚 Opciones de Entrega</h3>
-                            <div class="shipping-options">
-                                <div class="shipping-option">
-                                    <div class="option-header">
-                                        <span class="option-icon">🚚</span>
-                                        <div class="option-title">
-                                            <strong>Entrega Estándar</strong>
-                                            <small>Gratis • 2-3 días hábiles</small>
-                                        </div>
-                                    </div>
-                                    <p>Entregamos directamente a tu negocio en todo el Cibao. Para otras regiones, consultar disponibilidad.</p>
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <div class="product-badge new">🆕 Nuevo</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥔</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Papa Criolla Fresca</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Ana García</strong></p>
+                            <p class="product-location">📍 Norcentral, Moca</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">200 kg</span>
                                 </div>
-                                <div class="shipping-option">
-                                    <div class="option-header">
-                                        <span class="option-icon">📦</span>
-                                        <div class="option-title">
-                                            <strong>Recoger en Finca</strong>
-                                            <small>Descuento de RD$ 2.00/kg</small>
-                                        </div>
-                                    </div>
-                                    <p>Coordinamos una visita a nuestra finca en La Vega. Ideal para compras grandes o si estás en la zona.</p>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 35/kg</span>
                                 </div>
                             </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.6 (67)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card">
+                        <div class="product-badge discount">💫 Oferta</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🍍</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Piña Dulce de Barahona</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Miguel Díaz</strong></p>
+                            <p class="product-location">📍 Sur, Barahona</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">120 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 45/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.8 (92)</span>
+                                <span class="delivery">🚚 Entrega incluida</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card">
+                        <div class="product-badge low-stock">⚠️ Últimas unidades</div>
+                        <div class="product-image">
+                            <div class="image-placeholder">🥬</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Lechuga Romana Fresca</h3>
+                            <p class="product-farmer">👨‍🌾 Por: <strong>Elena Vargas</strong></p>
+                            <p class="product-location">📍 Cibao, Santiago</p>
+                            
+                            <div class="product-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Disponible</span>
+                                    <span class="stat-value">25 kg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Precio</span>
+                                    <span class="stat-value price">RD$ 30/kg</span>
+                                </div>
+                            </div>
+
+                            <div class="product-meta">
+                                <span class="rating">⭐ 4.5 (43)</span>
+                                <span class="delivery">📦 Recoge en finca</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <!-- CAMBIADO: Botón a enlace -->
+                            <a href="producto-detalle.html" class="btn btn-primary btn-block">
+                                👀 Ver Detalles
+                            </a>
+                            <button class="btn btn-outline btn-block">
+                                💬 Contactar
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Related Products -->
-            <div class="related-products">
-                <h3>🛒 Productos Relacionados</h3>
-                <div class="related-grid">
-                    <div class="related-card">
-                        <div class="related-image">🍅</div>
-                        <div class="related-info">
-                            <h4>Tomate Maduro</h4>
-                            <p>RD$ 40.00/kg</p>
-                            <span class="related-seller">Por Carlos Santana</span>
-                        </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn disabled">← Anterior</button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <span class="pagination-ellipsis">...</span>
+                        <button class="pagination-number">8</button>
                     </div>
-                    <div class="related-card">
-                        <div class="related-image">🥑</div>
-                        <div class="related-info">
-                            <h4>Aguacate Criollo</h4>
-                            <p>RD$ 60.00/kg</p>
-                            <span class="related-seller">Por Roberto Martínez</span>
-                        </div>
-                    </div>
-                    <div class="related-card">
-                        <div class="related-image">🥔</div>
-                        <div class="related-info">
-                            <h4>Papa Criolla</h4>
-                            <p>RD$ 35.00/kg</p>
-                            <span class="related-seller">Por Ana García</span>
-                        </div>
-                    </div>
+                    <button class="pagination-btn">Siguiente →</button>
                 </div>
             </div>
         </div>
@@ -465,14 +457,14 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="mercado.html">Mercado</a></li>
+                        <li><a href="precios.html">Precios</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Ayuda</h4>
+                    <h4>Soporte</h4>
                     <p>📞 809-123-4567</p>
-                    <p>✉️ ayuda@agroconecta.com</p>
-                    <p>🕒 Soporte 24/7</p>
+                    <p>✉️ soporte@agroconecta.com</p>
+                    <p>🕒 Lun-Vie: 8:00 AM - 6:00 PM</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -482,61 +474,21 @@
     </footer>
 
     <script>
-        // Tab Functionality
+        // View Toggle Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Tab switching
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabPanes = document.querySelectorAll('.tab-pane');
+            const viewBtns = document.querySelectorAll('.view-btn');
+            const productsView = document.getElementById('productsView');
             
-            tabBtns.forEach(btn => {
+            viewBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // Remove active class from all buttons and panes
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    tabPanes.forEach(p => p.classList.remove('active'));
-                    
+                    // Remove active class from all buttons
+                    viewBtns.forEach(b => b.classList.remove('active'));
                     // Add active class to clicked button
                     this.classList.add('active');
                     
-                    // Show corresponding pane
-                    const tabId = this.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-
-            // Quantity selector
-            const quantityInput = document.querySelector('.quantity-input');
-            const minusBtn = document.querySelector('.quantity-btn.minus');
-            const plusBtn = document.querySelector('.quantity-btn.plus');
-            const presetBtns = document.querySelectorAll('.preset-btn');
-
-            minusBtn.addEventListener('click', () => {
-                let value = parseInt(quantityInput.value);
-                if (value > 10) {
-                    quantityInput.value = value - 10;
-                }
-            });
-
-            plusBtn.addEventListener('click', () => {
-                let value = parseInt(quantityInput.value);
-                if (value < 300) {
-                    quantityInput.value = value + 10;
-                }
-            });
-
-            presetBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    presetBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    quantityInput.value = this.getAttribute('data-value');
-                });
-            });
-
-            // Thumbnail selection
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            thumbnails.forEach(thumb => {
-                thumb.addEventListener('click', function() {
-                    thumbnails.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
+                    // Toggle view
+                    const viewType = this.getAttribute('data-view');
+                    productsView.className = viewType === 'grid' ? 'products-grid' : 'products-list-view';
                 });
             });
         });
